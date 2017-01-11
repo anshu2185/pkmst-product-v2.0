@@ -1,0 +1,16 @@
+applications:
+- name: pkmst-product-service
+  memory: 1G
+  instances: 1
+  host: pkmst-product-service
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  path: target/pkmst-product.jar
+  services:
+  - pkmst-elk
+  #- pkmst-rabbitmq
+
+  env:
+    SPRING_ADMIN_PROKARMA_EI_PIVOTAL_URL: pkmst-spring-admin.apps.prokarma.com
+    REGISTRY_SERVER_PROKARMA_EI_PIVOTAL_URL: pkmst-registry.apps.prokarma.com
+    ZIPKIN_SERVER_PROKARMA_EI_PIVOTAL_URL: pkmst-zipkin.apps.prokarma.com
+    APP_HOSTNAME: pkmst-product-service.apps.prokarma.com
