@@ -1,3 +1,7 @@
 FROM frolvlad/alpine-oraclejdk8:slim
-COPY target/pkmst-product-1.0-SNAPSHOT.jar app.jar
+COPY target/pkmst-product.jar app.jar
+ENV SPRING_ADMIN_PROKARMA_EI_PIVOTAL_URL pkmst-spring-admin.apps.prokarma.com
+ENV REGISTRY_SERVER_PROKARMA_EI_PIVOTAL_URL pkmst-registry.apps.prokarma.com
+ENV ZIPKIN_SERVER_PROKARMA_EI_PIVOTAL_URL pkmst-zipkin.apps.prokarma.com
+EXPOSE 8080
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
