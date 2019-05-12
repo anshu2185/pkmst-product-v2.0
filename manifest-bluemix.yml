@@ -13,4 +13,3 @@ applications:
     SPRING_ADMIN_PROKARMA_EI_PIVOTAL_URL: pkmst-spring-admin.mybluemix.net
     REGISTRY_SERVER_PROKARMA_EI_PIVOTAL_URL: pkmst-registry.mybluemix.net
     ZIPKIN_SERVER_PROKARMA_EI_PIVOTAL_URL: pkmst-zipkin.mybluemix.net
-    APP_HOSTNAME: pkmst-product.mybluemix.net
